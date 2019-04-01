@@ -1,0 +1,26 @@
+{
+  "name": "app_1",
+  "version": "1.0.0",
+  "description": "Aplicacion de escritorio usando electron e intentando usar python",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no se ha especificado pruebas en este proyecto\" && exit 1",
+    "start": "electron src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daryl110/Electron-app.git"
+  },
+  "author": "Daryl110",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Daryl110/Electron-app/issues"
+  },
+  "homepage": "https://github.com/Daryl110/Electron-app#readme",
+  "dependencies": {
+    "electron": "^4.1.0"
+  },
+  "devDependencies": {
+    "electron-reload": "^1.4.0"
+  }
+}

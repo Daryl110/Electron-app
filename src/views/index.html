@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Electron</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <div class="col m-2">
+                    <button type="button" class="btn btn-danger" onclick="limpiarGrafo(); vaciarData();">LIMPIAR GRAFO</button>
+                </div>
+                <div class="col m-2">
+                    <svg id="grafica">
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <script src="./../scripts/grafos.js"></script>
+        <script src="./../scripts/operatividad.js"></script>
+        <div class="col">
+            <div class="row m-2">
+                <div class="col" style="border: #7758 1px solid;">
+                    <h1>Añadir Nodos</h1>
+                    <form style="margin: 0 10%;">
+                        <br>
+                        <div class="row">
+                            <label for="id_nodo">Id del nodo:</label>
+                            <input type="text" class="form-control form-control-sm" id="id_nodo">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <label for="grupo_nodo">Grupo del nodo:</label>
+                            <input type="text" class="form-control form-control-sm" id="grupo_nodo">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <label for="titulo_nodo">Titulo del nodo(Opcional):</label>
+                            <input type="text" class="form-control form-control-sm" id="titulo_nodo">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <button type="button" class="btn btn-primary"
+                                onclick="anadirNodo(document.getElementById('id_nodo').value, 
+                                    document.getElementById('grupo_nodo').value, document.getElementById('titulo_nodo').value)">AÑADIR</button>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+            <div class="row m-2">
+                <div class="col" style="border: #7758 1px solid;">
+                    <h1>Añadir Arcos</h1>
+                    <form style="margin: 0 10%;">
+                        <br>
+                        <div class="row">
+                            <label for="source_arco">Nodo Padre(id):</label>
+                            <input type="text" class="form-control form-control-sm" id="source_arco">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <label for="target_arco">Nodo Hijo(id):</label>
+                            <input type="text" class="form-control form-control-sm" id="target_arco">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <label for="value_arco">Valor del arco:</label>
+                            <input type="text" class="form-control form-control-sm" id="value_arco">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <button type="button" class="btn btn-primary"
+                                onclick="anadirArco(document.getElementById('source_arco').value, 
+                                            document.getElementById('target_arco').value, document.getElementById('value_arco').value)">AÑADIR</button>
+                        </div>
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
